@@ -189,19 +189,19 @@ function findPrime(n){
 
 function basicOpVerif(httpCtx, data)
 {
-    if (isNaN(httpCtx.x))
+    if (isNaN(httpCtx.x) || (httpCtx.x == 0 && (httpCtx.op == '/' || httpCtx.op == '%')))
             {
-                data.error = "x parameter is not a number";
+                data.error = "x parameter is not a valid number";
             }
             
-            if (isNaN(httpCtx.y))
+            if (isNaN(httpCtx.y) || (httpCtx.y == 0 && (httpCtx.op == '/' || httpCtx.op == '%')))
             {
-                data.error = "y parameter is not a number";
+                data.error = "y parameter is not a valid number";
             }
 
-            if (isNaN(httpCtx.y) && isNaN(httpCtx.x))
+            if (isNaN(httpCtx.y) || (httpCtx.x == 0 && (httpCtx.op == '/' || httpCtx.op == '%')) && isNaN(httpCtx.y) || (httpCtx.y == 0 && (httpCtx.op == '/' || httpCtx.op == '%')))
             {
-                data.error = "x and y parameter are not numbers";
+                data.error = "x and y parameter are not valid numbers";
             }
 
             return data;
