@@ -1,0 +1,16 @@
+{
+  "name": "labo1",
+  "version": "1.0.0",
+  "description": "premier labo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Antony Collin-Desrochers",
+  "license": "ISC",
+  "dependencies": {
+    "date-and-time": "^2.4.1",
+    "query-string": "^7.1.1"
+  }
+}
