@@ -82,6 +82,7 @@ module.exports = class MathsController extends require("./Controller") {
                 }
                 else
                 {
+                  data.value = 
                   this.HttpContext.path.params.value = null;
                 }
             
@@ -99,7 +100,7 @@ module.exports = class MathsController extends require("./Controller") {
                 }
                 else
                 {
-                  this.HttpContext.path.params.value = null;
+                  data.value = this.HttpContext.path.params.value = null;
                 }
             
                 this.HttpContext.response.JSON(data);
