@@ -80,6 +80,10 @@ module.exports = class MathsController extends require("./Controller") {
                     parseFloat(this.HttpContext.path.params.x) /
                     parseFloat(this.HttpContext.path.params.y);
                 }
+                else
+                {
+                  this.HttpContext.path.params.value = null;
+                }
             
                 this.HttpContext.response.JSON(data);
               break;
@@ -92,6 +96,10 @@ module.exports = class MathsController extends require("./Controller") {
                     data.value =
                     parseFloat(this.HttpContext.path.params.x) %
                     parseFloat(this.HttpContext.path.params.y);
+                }
+                else
+                {
+                  this.HttpContext.path.params.value = null;
                 }
             
                 this.HttpContext.response.JSON(data);
